@@ -1,0 +1,19 @@
+[
+    {
+        "target": "http://127.0.0.1:9100/metrics",
+        "resource": {
+            "type": "global",
+            "labels": {
+                "project_id": "XXXXXXXX"
+            }
+        },
+        "metric": {
+            "filter": "^node_cpu.*$",
+            "prefix": ["node_exporter"],
+            "labels": {
+                "instance_name": "localhost"
+            }
+        },
+        "interval": "15s"
+    }
+]
